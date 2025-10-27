@@ -1,8 +1,15 @@
 from gestion_archivos import *
 
-l = ["Elemento 1", "Elemento 2", "Elemento 3"]
-nombre_fichero = "Nombre del Fichero CSV"
 
-print("Banco de Pruebas")
+datos = [
+    {"nombre": "Ana", "edad": "30", "ciudad": "Madrid"},
+    {"nombre": "Luis", "edad": "25", "ciudad": "Sevilla"}
+]
 
-de_lista_a_csv(l, nombre_fichero)
+datos2 = [
+    {"nombre": "Ana", "edad": "30" },
+    {"nombre": "Luis", "edad": "25" }
+]
+
+de_lista_a_csv(datos, "personas.csv")
+ 
