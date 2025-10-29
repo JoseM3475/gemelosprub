@@ -1,5 +1,6 @@
 import csv
 import os
+import json
 
 def de_lista_a_csv(l, nombre_fichero):
     """
@@ -58,3 +59,13 @@ def de_lista_a_csv(l, nombre_fichero):
             escritor.writeheader()
             escritor.writerows(l)
         print(f"🆕 Archivo '{nombre_fichero}' creado con las columnas: {', '.join(columnas)}")
+
+def importar_json(nombre_fichero):
+    # Abrir y leer el archivo
+    with open(nombre_fichero, "r", encoding="utf-8") as archivo:
+        return json.load(archivo)
+
+def exportar_json(datos, nombre_fichero):
+    with open(nombre_fichero, "w", encoding="utf-8") as archivo:
+        json.dump(datos, archivo, indent=4, ensure_ascii=False)
+
