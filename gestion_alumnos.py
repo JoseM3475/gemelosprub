@@ -23,3 +23,18 @@ for alumno in lista_de_alumnos:
     l.append(d)
 
 exportar_json(l, "alumnos_con_media2.json")
+
+
+# Muestra la nota media de los alumnos
+
+nombre_archivo = "alumnos_con_media.json"
+
+lista_de_alumnos = importar_json(nombre_archivo)
+
+# print(lista_de_alumnos[1]["nombre"])
+
+for alumno in lista_de_alumnos:
+    nombre_alumno = alumno["nombre"]
+    apellido_alumno = alumno["apellidos"]
+    nota_media = alumno["nota_media"]
+    print(f"Nota media de : {nombre_alumno}, {apellido_alumno}: {nota_media}.")
